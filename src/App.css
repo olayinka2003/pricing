@@ -31,6 +31,12 @@ nav {
       rgba(255, 255, 255, 0.3) 46%,
       rgba(52, 52, 52, 0) 100%
     );
+  position: relative;
+}
+
+.menu {
+  display: none;
+  cursor: pointer;
 }
 
 nav div {
@@ -59,6 +65,46 @@ nav button {
   align-items: center;
   gap: 10px;
   border-radius: 10px;
+  cursor: pointer;
+}
+
+.sidebar button {
+  background: linear-gradient(173.04deg, #5e4be5 36.24%, #342a7f 122.43%);
+  border: none;
+  color: white;
+  padding: 10px 10px 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.sidebar ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 20px;
+}
+
+.sidebar {
+  display: flex;
+  gap: 50px;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  padding: 10px;
+  background: linear-gradient(173.04deg, #5e4be5 36.24%, #342a7f 122.43%);
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 8px;
+}
+
+.cancel {
+  color: white;
+  font-size: 20px;
   cursor: pointer;
 }
 
@@ -251,4 +297,131 @@ ul li {
   align-items: center;
   gap: 10px;
   color: rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 768px) {
+  .packages {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 50px;
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+  }
+
+  .goo {
+    display: none;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 20px;
+    overflow-x: hidden;
+  }
+
+  nav button {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .plan {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 1);
+  }
+  .your {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 1);
+    margin-top: -30px;
+  }
+
+  .needs {
+    width: 100%;
+    margin: auto;
+    margin-top: 50px;
+  }
+
+    .sidebar {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    width: 50%;
+    padding: 10px;
+    background: linear-gradient(173.04deg, #5e4be5 36.24%, #342a7f 122.43%);
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 8px;
+  }
+
+}
+
+@media (max-width: 320px) {
+  .packages {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 50px;
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+  }
+
+  .goo {
+    display: none;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 20px;
+    overflow-x: hidden;
+  }
+
+  nav button {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .plan {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 1);
+  }
+  .your {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 1);
+    margin-top: -30px;
+  }
+
+  .needs {
+    width: 100%;
+    margin: auto;
+    margin-top: 50px;
+  }
+
+  /* .sidebar {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    width: 30%;
+    padding: 10px;
+    background: linear-gradient(173.04deg, #5e4be5 36.24%, #342a7f 122.43%);
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 8px;
+  } */
 }
